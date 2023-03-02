@@ -3,9 +3,12 @@ using UnityEngine;
 
 public class TweenScaleAnimation : MonoBehaviour
 {
-    [Header("TWEENING PARAMETERS")]
+    [Header("TWEENING SCALE PARAMETERS")]
     [SerializeField, Range(0, 1f)] private float scaleInDuration = 0.5f;
     [SerializeField, Range(0, 1f)] private float scaleOutDuration = 0.5f;
+
+    [Header("TWEENING CLICK PARAMETERS")]
+    [SerializeField, Range(0, 1f)] private float scaleClickDuration = 0.5f;
 
     [SerializeField] private Ease ease;
 
@@ -54,5 +57,10 @@ public class TweenScaleAnimation : MonoBehaviour
     public void ScaleOutAnimation(Ease ease, float duration, TweenCallback tweenCallback)
     {
         transform.DOScale(Vector3.zero, duration).SetEase(ease).OnComplete(tweenCallback);
+    }
+
+    public void ScaleClickAnimation()
+    {
+        transform.DOScale(transform.localScale * 1.2f, scaleClickDuration).SetEase(ease).SetLoops(2, LoopType.Yoyo);
     }
 }
