@@ -20,6 +20,16 @@ public class Sandwich : MonoBehaviour
 
     private int amountOfMistakes;
 
+    private void OnEnable()
+    {
+        customersQueue.OnCustomerExitRestorant += RemoveAllIngredientObjects;
+    }
+
+    private void OnDisable()
+    {
+        customersQueue.OnCustomerExitRestorant -= RemoveAllIngredientObjects;
+    }
+
     public void ChooseAndPlaceSandwichIngredient(Ingredient ingredient)
     {
         if (sandwichIngredients.Count == 0)
@@ -92,8 +102,6 @@ public class Sandwich : MonoBehaviour
 
             amountOfMistakes++;
         }
-
-        Debug.Log(amountOfMistakes);
     }
 
     private void RemoveAllIngredientObjects()
@@ -104,6 +112,9 @@ public class Sandwich : MonoBehaviour
     private IEnumerator RemoveAllIngredientObjectsRoutine()
     {
         yield return new WaitForSeconds(0.1f);
+
+        if (ingredientObjects.Count == 0)
+            yield return null;
 
         for (int i = 0; i < ingredientObjects.Count; i++)
         {

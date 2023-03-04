@@ -7,6 +7,7 @@ public class CustomerUI : MonoBehaviour
     [SerializeField] private CustomersQueue customersQueue;
     [SerializeField] private GameObject recipePanel;
     [SerializeField] private TextMeshProUGUI recipeTMPro;
+    [SerializeField] private TextMeshProUGUI customerWaitingTimeTMPro;
 
     private List<GameObject> ingredientUIObjects = new List<GameObject>();
 
@@ -15,13 +16,19 @@ public class CustomerUI : MonoBehaviour
 
     private void OnEnable()
     {
+        customersQueue.OnCustomerInCashRegisterPosition += EnableCustomerWaitingTimeText;
         customersQueue.OnCustomerInCashRegisterPosition += ShowCustomerRecipe;
+
+        customersQueue.OnCustomerExitRestorant += DisableCustomerWaitingTimeText;
         customersQueue.OnCustomerExitRestorant += HideCustomerRecipe;
     }
 
     private void OnDisable()
     {
+        customersQueue.OnCustomerInCashRegisterPosition -= EnableCustomerWaitingTimeText;
         customersQueue.OnCustomerInCashRegisterPosition -= ShowCustomerRecipe;
+
+        customersQueue.OnCustomerExitRestorant -= DisableCustomerWaitingTimeText;
         customersQueue.OnCustomerExitRestorant -= HideCustomerRecipe;
     }
 
@@ -29,6 +36,29 @@ public class CustomerUI : MonoBehaviour
     {
         recipePanelScaleAnimation = recipePanel.GetComponent<TweenScaleAnimation>();
         recipeTextScaleAnimation = recipeTMPro.GetComponent<TweenScaleAnimation>();
+    }
+
+    private void Update()
+    {
+        if (customersQueue.GetFirtsCustomer() != null)
+        {
+            UpdateCustomerWaitingTimeText(customersQueue.GetFirtsCustomer().GetCustomerWaitingTime().ToString());
+        }
+    }
+
+    private void EnableCustomerWaitingTimeText()
+    {
+        customerWaitingTimeTMPro.gameObject.SetActive(true);
+    }
+
+    private void DisableCustomerWaitingTimeText()
+    {
+        customerWaitingTimeTMPro.gameObject.SetActive(false);
+    }
+
+    public void UpdateCustomerWaitingTimeText(string text)
+    {
+        customerWaitingTimeTMPro.text = text;
     }
 
     private void ShowCustomerRecipe()

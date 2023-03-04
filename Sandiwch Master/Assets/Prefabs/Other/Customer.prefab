@@ -1176,9 +1176,10 @@ MonoBehaviour:
   animator: {fileID: 4790520189375888739}
   sandwichRecipe: []
   skinnedMeshRenderer: {fileID: 2179891709567767399}
-  customerWaitingTime: 3
+  customerWaitingTime: 10
   duration: 0.2
   ease: 1
+  IsCustomerWaitingTimeUp: 0
 --- !u!114 &3400203929317785264
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -32,12 +32,19 @@ public class CustomersQueue : MonoBehaviour
 
     private void Update()
     {
+        if (customersQueue.Count > 0)
+        {
+            if (firstCustomerInQueue.IsCustomerWaitingTimeUp)
+            {
+                ServeClient();
+            }
+        }
+
         if (customersQueue.Count > 0 && GameManager.Instance.GetCurrentGameState() == GameState.DayIsGoing)
         {
             if (!customersQueue.Peek().IsCustomerInCashRegisterPosition)
             {
                 GameManager.Instance.IsIngredientButtonsInteractable = false;
-
                 CheckFirstCustomerPosition();
             }
         }
@@ -47,8 +54,6 @@ public class CustomersQueue : MonoBehaviour
     {
         OnCustomerExitRestorant?.Invoke();
         firstCustomerInQueue.ExitRestorant();
-
-        GameManager.Instance.SwitchGameStateTo(GameState.DayIsGoing);
 
         RemoveFirtCustomerInQueue();
     }
