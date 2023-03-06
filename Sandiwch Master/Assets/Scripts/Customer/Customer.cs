@@ -6,6 +6,7 @@ public class Customer : MonoBehaviour
 {
     [Header("COMPONENTS")]
     [SerializeField] private Sandwich sandwich;
+
     [SerializeField] private CustomerUI customerUI;
 
     [SerializeField] private Animator animator;
@@ -23,7 +24,7 @@ public class Customer : MonoBehaviour
 
     private int sandwichSize = 4;
 
-    public bool IsCustomerWaitingTimeUp;
+    public bool IsCustomerWaitingTimeUp { get; private set; }
     public bool IsCustomerInCashRegisterPosition { get; set; }
 
     private void Start()

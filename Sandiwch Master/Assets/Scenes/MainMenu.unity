@@ -161,7 +161,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: 450, y: 230}
+  m_SizeDelta: {x: 582.9, y: 230}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &95871960
 MonoBehaviour:
@@ -185,16 +185,16 @@ MonoBehaviour:
       m_Calls: []
   m_text: SANDWICH MASTER
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: d88e813eb7eb7d04b9b7d4e89b91305e, type: 2}
-  m_sharedMaterial: {fileID: -1481870240215863018, guid: d88e813eb7eb7d04b9b7d4e89b91305e,
+  m_fontAsset: {fileID: 11400000, guid: e2776aa0507cbed4f995e02cb2a1dbb1, type: 2}
+  m_sharedMaterial: {fileID: -4924582864101604132, guid: e2776aa0507cbed4f995e02cb2a1dbb1,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4283834144
-  m_fontColor: {r: 0.1254902, g: 0.121568635, b: 0.3372549, a: 1}
+    rgba: 4283767841
+  m_fontColor: {r: 0.12941177, g: 0.10980393, b: 0.33333334, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1300,6 +1300,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2811288131060791490, guid: dcdffe70ee64ada4aa87862c5385077f,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e2776aa0507cbed4f995e02cb2a1dbb1,
+        type: 2}
+    - target: {fileID: 2811288131060791490, guid: dcdffe70ee64ada4aa87862c5385077f,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -4924582864101604132, guid: e2776aa0507cbed4f995e02cb2a1dbb1,
+        type: 2}
     - target: {fileID: 3417546141699996224, guid: dcdffe70ee64ada4aa87862c5385077f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

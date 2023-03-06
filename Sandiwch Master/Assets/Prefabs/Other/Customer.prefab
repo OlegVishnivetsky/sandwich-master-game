@@ -1174,8 +1174,8 @@ MonoBehaviour:
   customerUI: {fileID: 6887747496076079848, guid: abb0b4e5e24e95041b36da07d01e3f17,
     type: 3}
   animator: {fileID: 4790520189375888739}
-  sandwichRecipe: []
   skinnedMeshRenderer: {fileID: 2179891709567767399}
+  sandwichRecipe: []
   customerWaitingTime: 10
   duration: 0.2
   ease: 1
