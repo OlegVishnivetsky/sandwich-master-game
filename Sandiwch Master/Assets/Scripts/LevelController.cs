@@ -3,46 +3,33 @@ using UnityEngine.UI;
 
 public class LevelController : MonoBehaviour
 {
-    [SerializeField] private int goalAmountOfServedCustomers;
-    private int currentAmountOfServedCustomers;
-
     [Header("COMPONENTS")]
-    [SerializeField] private CustomersQueue customersQueue;
+    [SerializeField] private Timer timer;
     [SerializeField] private Slider levelSlider;
 
     private void OnEnable()
     {
-        customersQueue.OnCustomerExitRestorant += IncreaseCurrentAmountOfServedCustomers;
+        timer.OnTimerCurrentValueChanged += UpdateLevelSliderValue;
+        timer.OnTimerEnd.AddListener(() => GameManager.Instance.SwitchGameStateTo(GameState.DayEnded));
     }
 
     private void OnDisable()
     {
-        customersQueue.OnCustomerExitRestorant -= IncreaseCurrentAmountOfServedCustomers;
+        timer.OnTimerCurrentValueChanged -= UpdateLevelSliderValue;
     }
 
     private void Start()
     {
-        levelSlider.maxValue = goalAmountOfServedCustomers;
-        currentAmountOfServedCustomers = 0;
-
-        UpdateLevelSliderValue();
+        levelSlider.maxValue = timer.GetTimerDuration();
     }
 
-    private void IncreaseCurrentAmountOfServedCustomers()
+    private void Update()
     {
-        if (currentAmountOfServedCustomers >= goalAmountOfServedCustomers) return;
-
-        currentAmountOfServedCustomers++;
-        UpdateLevelSliderValue();
+        timer.TimerTick(Time.deltaTime);
     }
 
-    private void UpdateLevelSliderValue()
+    private void UpdateLevelSliderValue(float value)
     {
-        levelSlider.value = currentAmountOfServedCustomers;
-        
-        if (currentAmountOfServedCustomers == goalAmountOfServedCustomers)
-        {
-            GameManager.Instance.SwitchGameStateTo(GameState.DayEnded);
-        }
+        levelSlider.value = value;
     }
 }

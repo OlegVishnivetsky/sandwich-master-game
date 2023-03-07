@@ -34,7 +34,7 @@ public class CustomersQueue : MonoBehaviour
     {
         if (customersQueue.Count > 0)
         {
-            if (firstCustomerInQueue.IsCustomerWaitingTimeUp)
+            if (firstCustomerInQueue.IsCustomerTimerEnd)
             {
                 ServeClient();
             }

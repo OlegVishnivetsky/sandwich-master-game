@@ -15,7 +15,7 @@ public class Customer : MonoBehaviour
     [SerializeField] private List<Ingredient> sandwichRecipe;
 
     [Space(5)]
-    [SerializeField] private float customerWaitingTime;
+    [SerializeField] private Timer customerTimer;
 
     [Header("ROTATION TWEEN SETTINGS")]
     [SerializeField] private float duration;
@@ -24,8 +24,13 @@ public class Customer : MonoBehaviour
 
     private int sandwichSize = 4;
 
-    public bool IsCustomerWaitingTimeUp { get; private set; }
+    public bool IsCustomerTimerEnd;
     public bool IsCustomerInCashRegisterPosition { get; set; }
+
+    private void OnEnable()
+    {
+        customerTimer.OnTimerEnd.AddListener(() => IsCustomerTimerEnd = true);
+    }
 
     private void Start()
     {
@@ -34,7 +39,10 @@ public class Customer : MonoBehaviour
 
     private void Update()
     {
-        TimerCustomerWaitingTime();
+        if (IsCustomerInCashRegisterPosition)
+        {
+            customerTimer.TimerTick(Time.deltaTime);
+        }
     }
 
     public List<Ingredient> GetSandwichRecipe()
@@ -42,15 +50,15 @@ public class Customer : MonoBehaviour
         return sandwichRecipe;
     }
 
-    public int GetCustomerWaitingTime()
-    {
-        return (int)customerWaitingTime;
-    }
+    //public int GetCustomerWaitingTime()
+    //{
+    //    return (int)customerWaitingTime;
+    //}
 
-    public void SetCustomerWaitingTime(float value)
-    {
-        customerWaitingTime = value;
-    }
+    //public void SetCustomerWaitingTime(float value)
+    //{
+    //    customerWaitingTime = value;
+    //}
 
     public void SetCustomerRandomColor()
     {
@@ -58,16 +66,16 @@ public class Customer : MonoBehaviour
             (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
     }
 
-    private void TimerCustomerWaitingTime()
-    {
-        if (IsCustomerInCashRegisterPosition && customerWaitingTime >= 0)
-        {
-            customerWaitingTime -= 1 * Time.deltaTime;
+    //private void TimerCustomerWaitingTime()
+    //{
+    //    if (IsCustomerInCashRegisterPosition && customerWaitingTime >= 0)
+    //    {
+    //        customerWaitingTime -= 1 * Time.deltaTime;
 
-            if (customerWaitingTime <= 0)
-                IsCustomerWaitingTimeUp = true;
-        }
-    }
+    //        if (customerWaitingTime <= 0)
+    //            IsCustomerWaitingTimeUp = true;
+    //    }
+    //}
 
     public void ExitRestorant()
     {

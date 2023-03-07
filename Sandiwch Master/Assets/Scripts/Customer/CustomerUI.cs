@@ -14,6 +14,8 @@ public class CustomerUI : MonoBehaviour
     private TweenScaleAnimation recipePanelScaleAnimation;
     private TweenScaleAnimation recipeTextScaleAnimation;
 
+    private Timer firstCustomerTimer;
+
     private void OnEnable()
     {
         customersQueue.OnCustomerInCashRegisterPosition += EnableCustomerWaitingTimeText;
@@ -40,19 +42,21 @@ public class CustomerUI : MonoBehaviour
 
     private void Update()
     {
-        if (customersQueue.GetFirtsCustomer() != null)
+        if (firstCustomerTimer != null)
         {
-            UpdateCustomerWaitingTimeText(customersQueue.GetFirtsCustomer().GetCustomerWaitingTime().ToString());
+            UpdateCustomerWaitingTimeText(firstCustomerTimer.GetTimerCurrentValue().ToString("#.0"));
         }
     }
 
     private void EnableCustomerWaitingTimeText()
     {
+        firstCustomerTimer = customersQueue.GetFirtsCustomer().GetComponent<Timer>();
         customerWaitingTimeTMPro.gameObject.SetActive(true);
     }
 
     private void DisableCustomerWaitingTimeText()
     {
+        firstCustomerTimer = null;
         customerWaitingTimeTMPro.gameObject.SetActive(false);
     }
 

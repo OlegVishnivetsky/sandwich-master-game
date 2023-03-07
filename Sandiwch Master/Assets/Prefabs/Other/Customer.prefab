@@ -1100,6 +1100,7 @@ GameObject:
   - component: {fileID: 4790520189375888737}
   - component: {fileID: 3400203929317785264}
   - component: {fileID: 4654898647117453657}
+  - component: {fileID: 8011267344141586924}
   m_Layer: 6
   m_Name: Customer
   m_TagString: Untagged
@@ -1176,10 +1177,9 @@ MonoBehaviour:
   animator: {fileID: 4790520189375888739}
   skinnedMeshRenderer: {fileID: 2179891709567767399}
   sandwichRecipe: []
-  customerWaitingTime: 10
+  customerTimer: {fileID: 8011267344141586924}
   duration: 0.2
   ease: 1
-  IsCustomerWaitingTimeUp: 0
 --- !u!114 &3400203929317785264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1212,6 +1212,34 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &8011267344141586924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672901014794249952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 880fc51f2499a15479ae5ee2c270b5b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 10
+  onTimerEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4790520189375888737}
+        m_TargetAssemblyTypeName: Customer, Assembly-CSharp
+        m_MethodName: set_IsCustomerWaitingTimeUp
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!1 &5749673152890988949
 GameObject:
   m_ObjectHideFlags: 0
