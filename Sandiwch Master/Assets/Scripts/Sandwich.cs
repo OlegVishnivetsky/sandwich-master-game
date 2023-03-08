@@ -14,11 +14,15 @@ public class Sandwich : MonoBehaviour
     private List<Ingredient> sandwichIngredients = new List<Ingredient>();
     private List<Ingredient> ingredientObjects = new List<Ingredient>();
 
-    private Transform lastIngredientTransform;
+    private Ingredient lastIngredient;
 
     public event Action OnSandwichIsDone;
 
-    private int amountOfMistakes;
+    private Ingredient previousIngredient;
+
+    private float ingredientVerticalOffset;
+
+    private float amountOfMistakes;
 
     private void OnEnable()
     {
@@ -41,26 +45,22 @@ public class Sandwich : MonoBehaviour
         else
         {
             PlaceSandwichIngredient(ingredient, new Vector3(spawnSandwichPoint.position.x,
-                lastIngredientTransform.position.y + verticalOffset,
+                ingredientVerticalOffset + ingredient.GetVerticalOffset(),
                 spawnSandwichPoint.position.z));
         }
     }
 
     private void PlaceSandwichIngredient(Ingredient ingredient, Vector3 position)
-    {
+    { 
         sandwichIngredients.Add(ingredient);
 
         Ingredient ingredientObject = Instantiate(ingredient,
             position, Quaternion.identity);
+        ingredientVerticalOffset = ingredientObject.transform.position.y;
 
         ingredientObjects.Add(ingredientObject);
 
         CheckFirstCustomerSandwichCorrectness();
-
-        if (sandwichIngredients.Count > 0)
-        {
-            lastIngredientTransform = ingredientObjects[ingredientObjects.Count - 1].gameObject.transform;
-        }
     }
 
     private void CheckFirstCustomerSandwichCorrectness()
@@ -139,9 +139,9 @@ public class Sandwich : MonoBehaviour
             sandwichIngredients.Remove(ingredientToRemove);
             ingredientObjects.Remove(ingredientObjectToRemove);
 
-            lastIngredientTransform = ingredientObjects[ingredientObjects.Count - 1].gameObject.transform;
+            lastIngredient = ingredientObjects[ingredientObjects.Count - 1];
 
-            Destroy(ingredientObjectToRemove.gameObject);
+            Destroy(ingredientToRemove.gameObject);
         });
     }
 

@@ -6,7 +6,7 @@ public enum IngredientType
     Other
 }
 
-public class IngredientBehaviour : Ingredient
+public class IngredientBehaviour : MonoBehaviour
 {
     [Header("COMPONENTS")]
     [SerializeField] private Ingredient ingredientPrefab;

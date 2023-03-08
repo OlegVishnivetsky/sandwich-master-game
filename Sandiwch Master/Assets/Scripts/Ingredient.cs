@@ -4,6 +4,8 @@ public class Ingredient : MonoBehaviour
 {
     [SerializeField] private GameObject ingredientUIObject;
     [SerializeField] private IngredientType ingredientType;
+    [Tooltip("Vertical offset from previous spawned ingredient")]
+    [SerializeField] private float verticalOffset;
 
     public GameObject GetIngredientUIObject()
     {
@@ -13,5 +15,10 @@ public class Ingredient : MonoBehaviour
     public IngredientType GetIngredientType()
     {
         return ingredientType;
+    }
+
+    public float GetVerticalOffset()
+    {
+        return verticalOffset;
     }
 }

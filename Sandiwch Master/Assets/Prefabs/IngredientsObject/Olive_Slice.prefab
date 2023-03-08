@@ -100,6 +100,7 @@ MonoBehaviour:
   ingredientUIObject: {fileID: 8033426410602676239, guid: 936c50baa91af8240a091da00a64b2ab,
     type: 3}
   ingredientType: 1
+  verticalOffset: 0.04
 --- !u!114 &7482022663649216285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scaleInDuration: 0.2
   scaleOutDuration: 0.2
+  scaleClickDuration: 0.5
   ease: 0
   playOnAwakeScaleInAnimation: 1
   originalScale: {x: 3, y: 5, z: 3}
