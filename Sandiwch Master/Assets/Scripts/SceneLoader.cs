@@ -22,4 +22,9 @@ public class SceneLoader : MonoBehaviour
     {
         SceneManager.LoadSceneAsync(1);
     }
+
+    public void OnQuitButton()
+    {
+        Application.Quit();
+    }
 }

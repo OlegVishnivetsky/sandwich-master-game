@@ -1,0 +1,1477 @@
+fileFormatVersion: 2
+guid: 6ab09061d1f085e4ba98f04a5db18d7e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RoundButtons_0
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 2091
+        width: 279
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7891fe0e35bb65c49b8c25c6ade2d6a5
+      internalID: 1205343175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_1
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 2098
+        width: 214
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d90217e6707244448b7da8a218c714a
+      internalID: 971159393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_2
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 2063
+        width: 158
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1a629a24bcb534fb25edc40d4ea6aa
+      internalID: -2120926572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_3
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 2063
+        width: 158
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a8aa84c24ad9e54ca98d26aeac86455
+      internalID: -84531714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_4
+      rect:
+        serializedVersion: 2
+        x: 1435
+        y: 1815
+        width: 158
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 548a14514fb9ddc4da9544277905b924
+      internalID: -1950732229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_5
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 1976
+        width: 86
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b86defda118be4295da29d61b5fb07
+      internalID: -1534125984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_6
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 1842
+        width: 705
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb63629374613641911afb6a7097604
+      internalID: 2108427535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_7
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1851
+        width: 214
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b738f6c310357b24c9bc5be3bfa6c673
+      internalID: -1202924023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_8
+      rect:
+        serializedVersion: 2
+        x: 1895
+        y: 1815
+        width: 158
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9efbea8453f773d49800e0c045c859e2
+      internalID: 740986241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_9
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 1596
+        width: 310
+        height: 92
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd32ecdb5ce4de4c8daf889b75e0131
+      internalID: 1167513619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_10
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 1604
+        width: 214
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6162e5aab5ebc43a8d8a5b04b19a02
+      internalID: 73303860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_11
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 1568
+        width: 158
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf93748742d29a4ebe623ffcbabbfda
+      internalID: 1904954545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_12
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1268
+        width: 159
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a1f31668329c854b8a0ca2205e90e42
+      internalID: -1508462582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_13
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1259
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ea0482c909af1947bb9e2e1595f5958
+      internalID: -1835834001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_14
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1259
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2567a6864472d7544a1b680fe48032ae
+      internalID: -1729364284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_15
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1259
+        width: 174
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9340656674ac344e81a3cf9437141f6
+      internalID: -427917603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_16
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1259
+        width: 174
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd2616f60d83e94d85d5df865f5da75
+      internalID: 825160078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_17
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 1259
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d782137227c4e848a960db1c062df29
+      internalID: 905134146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_18
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1259
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a607f664abccc5f42bf61d3c7e9a0548
+      internalID: -1242632667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_19
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 1259
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0f9537795837c14ab52d5f8134b9e7b
+      internalID: 1136692560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_20
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1008
+        width: 172
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92de9456e1dffd744a752d042a73cebe
+      internalID: -88104435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_21
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1008
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da32dc820761a1f45b9c9d004e1a2de0
+      internalID: 1581658996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_22
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 1008
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97060b0655edc154e94da89f1c5c7fb6
+      internalID: 1334738711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_23
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 1008
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2173a4862bea58144a3a79c7ed00825b
+      internalID: 524406002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_24
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 1008
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e1146b4193edc48b743723167fb0b3
+      internalID: 1660557068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_25
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 1008
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fe41c33f535c847abe22fc96bde1ec
+      internalID: 574580268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_26
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 1008
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97a7aff82eefb9c4db15001288f34ad7
+      internalID: 746658534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_27
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 1008
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a99cf39f218a984f8a0229485530882
+      internalID: 1267537175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_28
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 765
+        width: 159
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f932efcbd928fdc429e25f08b9d987bf
+      internalID: 1154611279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_29
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 756
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cfb4d4be14a2d74cb86162b08a064a2
+      internalID: -1215017574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_30
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 756
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8001d2333a4bc8b4eb93c6df4441ff48
+      internalID: -834487687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_31
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 756
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8464a10e1b7589419be00442bb5c7a5
+      internalID: -1467253472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_32
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 756
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3815ab3fece9264cbec4421dd75c220
+      internalID: -133919199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_33
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 756
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a26022c547a7b164cb1378a12f2ec7bd
+      internalID: 372939656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_34
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 756
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3c5602338080c44871cd24d654710d
+      internalID: 668494801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_35
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 756
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7d79559f942f1489f9219655f54c2d
+      internalID: -1736637015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_36
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 504
+        width: 172
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10df7bfa0d9b530499f21e4f71387671
+      internalID: -886648009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_37
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 504
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3839b203e4da01e44a1fb28d6d769fb6
+      internalID: 655373547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_38
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 504
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b72403bf452be4e9888e928fb8c815
+      internalID: 693746125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_39
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 504
+        width: 174
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cc236d426f730d47aeefec4084b8f1e
+      internalID: -2001290975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_40
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 504
+        width: 174
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86ccdca2758be2d4480864ca2fffcc4b
+      internalID: -2909991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_41
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 504
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ca43525ab859724fb9f090b15d1e7df
+      internalID: -1652686179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_42
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 504
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa4a06bf62f9277448600a627c819b61
+      internalID: 1900401542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_43
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 504
+        width: 173
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4f655a1445e8334293d8a7b9ad9326a
+      internalID: 1408354000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_44
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 262
+        width: 159
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f04ebd7c9f1b946817e41ff28e5c4b
+      internalID: 388698163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_45
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 253
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47244893b29eb6c4f8cb0d8d5f4cff3a
+      internalID: -1249744151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_46
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 253
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 517723ef8bfebc0489236d60e1f703db
+      internalID: 234905143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_47
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 253
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9374bc93dcaf0804090effd7276161f5
+      internalID: -329483190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_48
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 253
+        width: 174
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99c937e40c59d8458a69356ea87e4a8
+      internalID: -1958955321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_49
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 253
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f01b877ebdbcf9843882cdb0f59466c4
+      internalID: 1560358944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_50
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 253
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d70d52af123cb040b2cb3bf2f38bc1f
+      internalID: 1424808572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_51
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 253
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2efe5cbaaa481154a80f2dcebfb24d97
+      internalID: 1559975081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_52
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 2
+        width: 172
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 680dbc26c584f934e810cd2527517946
+      internalID: -2069862170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_53
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 2
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa97c3f51a0589a4cb2e7b16d848b57c
+      internalID: -299813038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_54
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 2
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb9ec25ade5d59c4b998a1c24f09ada2
+      internalID: 1949387658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_55
+      rect:
+        serializedVersion: 2
+        x: 1420
+        y: 0
+        width: 174
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 943776a30440db84cb9c6276656d0c32
+      internalID: -729816129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_56
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 0
+        width: 174
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05dbfca0421666147a069f302463a87f
+      internalID: -633864475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_57
+      rect:
+        serializedVersion: 2
+        x: 2367
+        y: 2
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be9438b70507734b849fd1323410695
+      internalID: -783927933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_58
+      rect:
+        serializedVersion: 2
+        x: 2840
+        y: 2
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e69f43fe887f340aeec2a21c8a2cb2
+      internalID: -118262026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_59
+      rect:
+        serializedVersion: 2
+        x: 3313
+        y: 2
+        width: 173
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03ec39e79f938e4c9c69c4bd802412d
+      internalID: -371623591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundButtons_60
+      rect:
+        serializedVersion: 2
+        x: 3180
+        y: 1860
+        width: 52
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02d24845eae84614ea1c079e6e094859
+      internalID: 847670750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RoundButtons_9: 1167513619
+      RoundButtons_3: -84531714
+      RoundButtons_28: 1154611279
+      RoundButtons_2: -2120926572
+      RoundButtons_22: 1334738711
+      RoundButtons_41: -1652686179
+      RoundButtons_31: -1467253472
+      RoundButtons_16: 825160078
+      RoundButtons_38: 693746125
+      RoundButtons_45: -1249744151
+      RoundButtons_55: -729816129
+      RoundButtons_20: -88104435
+      RoundButtons_48: -1958955321
+      RoundButtons_11: 1904954545
+      RoundButtons_46: 234905143
+      RoundButtons_14: -1729364284
+      RoundButtons_50: 1424808572
+      RoundButtons_34: 668494801
+      RoundButtons_24: 1660557068
+      RoundButtons_23: 524406002
+      RoundButtons_39: -2001290975
+      RoundButtons_0: 1205343175
+      RoundButtons_19: 1136692560
+      RoundButtons_32: -133919199
+      RoundButtons_21: 1581658996
+      RoundButtons_57: -783927933
+      RoundButtons_10: 73303860
+      RoundButtons_25: 574580268
+      RoundButtons_42: 1900401542
+      RoundButtons_54: 1949387658
+      RoundButtons_1: 971159393
+      RoundButtons_58: -118262026
+      RoundButtons_36: -886648009
+      RoundButtons_7: -1202924023
+      RoundButtons_30: -834487687
+      RoundButtons_43: 1408354000
+      RoundButtons_53: -299813038
+      RoundButtons_51: 1559975081
+      RoundButtons_44: 388698163
+      RoundButtons_4: -1950732229
+      RoundButtons_15: -427917603
+      RoundButtons_52: -2069862170
+      RoundButtons_8: 740986241
+      RoundButtons_59: -371623591
+      RoundButtons_49: 1560358944
+      RoundButtons_56: -633864475
+      RoundButtons_47: -329483190
+      RoundButtons_26: 746658534
+      RoundButtons_17: 905134146
+      RoundButtons_40: -2909991
+      RoundButtons_6: 2108427535
+      RoundButtons_13: -1835834001
+      RoundButtons_18: -1242632667
+      RoundButtons_5: -1534125984
+      RoundButtons_29: -1215017574
+      RoundButtons_60: 847670750
+      RoundButtons_35: -1736637015
+      RoundButtons_37: 655373547
+      RoundButtons_12: -1508462582
+      RoundButtons_33: 372939656
+      RoundButtons_27: 1267537175
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

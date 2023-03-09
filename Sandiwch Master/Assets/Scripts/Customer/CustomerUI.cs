@@ -6,13 +6,13 @@ public class CustomerUI : MonoBehaviour
 {
     [SerializeField] private CustomersQueue customersQueue;
     [SerializeField] private GameObject recipePanel;
-    [SerializeField] private TextMeshProUGUI recipeTMPro;
+    [SerializeField] private GameObject recipeHeaderImage;
     [SerializeField] private TextMeshProUGUI customerWaitingTimeTMPro;
 
     private List<GameObject> ingredientUIObjects = new List<GameObject>();
 
     private TweenScaleAnimation recipePanelScaleAnimation;
-    private TweenScaleAnimation recipeTextScaleAnimation;
+    private TweenScaleAnimation recipeHeaderImageScaleAnimation;
 
     private Timer firstCustomerTimer;
 
@@ -37,7 +37,7 @@ public class CustomerUI : MonoBehaviour
     private void Awake()
     {
         recipePanelScaleAnimation = recipePanel.GetComponent<TweenScaleAnimation>();
-        recipeTextScaleAnimation = recipeTMPro.GetComponent<TweenScaleAnimation>();
+        recipeHeaderImageScaleAnimation = recipeHeaderImage.GetComponent<TweenScaleAnimation>();
     }
 
     private void Update()
@@ -68,7 +68,7 @@ public class CustomerUI : MonoBehaviour
     private void ShowCustomerRecipe()
     {
         recipePanelScaleAnimation.ScaleInAnimation();
-        recipeTextScaleAnimation.ScaleInAnimation();
+        recipeHeaderImageScaleAnimation.ScaleInAnimation();
 
         foreach (Ingredient ingredient in customersQueue.GetFirtsCustomer().GetSandwichRecipe())
         {
@@ -84,7 +84,7 @@ public class CustomerUI : MonoBehaviour
     private void HideCustomerRecipe()
     {
         recipePanelScaleAnimation.ScaleOutAnimation();
-        recipeTextScaleAnimation.ScaleOutAnimation();
+        recipeHeaderImageScaleAnimation.ScaleOutAnimation();
 
         foreach (GameObject ingredient in ingredientUIObjects)
         {
