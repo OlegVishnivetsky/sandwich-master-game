@@ -61,7 +61,6 @@ public class TweenScaleAnimation : MonoBehaviour
 
     public void ScaleClickAnimation()
     {
-        LeanTween.scale(gameObject, transform.localScale * 1.2f, scaleClickDuration).setEase(ease)
-            .setLoopCount(1);
+        LeanTween.scale(gameObject, transform.localScale * 1.2f, scaleClickDuration).setEase(LeanTweenType.punch);
     }
 }

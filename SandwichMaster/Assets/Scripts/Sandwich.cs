@@ -16,10 +16,11 @@ public class Sandwich : MonoBehaviour
     private Ingredient lastIngredient;
 
     public event Action OnSandwichIsDone;
+    public event Action<int> OnCustomerCoinsCalculated;
 
     private float ingredientVerticalOffset;
 
-    private float amountOfMistakes;
+    private int amountOfMistakes;
 
     private void OnEnable()
     {
@@ -73,10 +74,12 @@ public class Sandwich : MonoBehaviour
         if (IsSandwichDone())
         {
             GameManager.Instance.IsIngredientButtonsInteractable = false;
-            OnSandwichIsDone?.Invoke();
 
+            CalculateCustomerCoins();
             CompareSandwichWithRecipe(sandwichRecipe);
             RemoveAllIngredientObjects();
+
+            OnSandwichIsDone?.Invoke();
         }
 
         bool IsSandwichDone()
@@ -100,6 +103,14 @@ public class Sandwich : MonoBehaviour
 
             amountOfMistakes++;
         }
+    }
+
+    private void CalculateCustomerCoins()
+    {
+        int coins = 0;
+
+        coins = ingredientObjects.Count - amountOfMistakes;
+        OnCustomerCoinsCalculated(coins);
     }
 
     private void RemoveAllIngredientObjects()
