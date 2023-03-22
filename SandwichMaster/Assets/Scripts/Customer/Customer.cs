@@ -24,7 +24,7 @@ public class Customer : MonoBehaviour
 
     private int sandwichSize = 4;
 
-    public bool IsCustomerTimerEnd;
+    public bool IsCustomerTimerEnd { get; set; }
     public bool IsCustomerInCashRegisterPosition { get; set; }
 
     private void OnEnable()
@@ -52,8 +52,8 @@ public class Customer : MonoBehaviour
 
     public void SetCustomerRandomColor()
     {
-        skinnedMeshRenderer.material.color = new Color32((byte)UnityEngine.Random.Range(0, 255),
-            (byte)UnityEngine.Random.Range(0, 255), (byte)UnityEngine.Random.Range(0, 255), 255);
+        skinnedMeshRenderer.material.SetColor("_BaseColor", new Color32((byte)UnityEngine.Random.Range(0, 255),
+            (byte)UnityEngine.Random.Range(0, 255), (byte)UnityEngine.Random.Range(0, 255), 255));
     }
 
     public void ExitRestorant()

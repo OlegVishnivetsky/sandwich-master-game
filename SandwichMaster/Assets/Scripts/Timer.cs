@@ -1,26 +1,40 @@
 using System;
+using System.IO;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    [SerializeField] private Slider slider;
     [SerializeField] private float duration;
+    [SerializeField] private bool isTimerUseSlider;
     private float currentValue;
 
     public UnityEvent OnTimerEnd;
 
-    public event Action<float> OnTimerCurrentValueChanged;
-
-    private bool IsTimerActive = true;
+    private void OnEnable()
+    {
+        OnTimerEnd.AddListener(() => GameManager.Instance.SwitchGameStateTo(GameState.DayEnded));
+    }
 
     private void Start()
     {
         currentValue = duration;
+
+        if (isTimerUseSlider)
+        {
+            slider.maxValue = duration;
+        }
     }
 
-    public float GetTimerDuration() 
-    { 
-        return currentValue; 
+    private void Update()
+    {
+        if (isTimerUseSlider)
+        {
+            currentValue -= Time.deltaTime;
+            slider.value = currentValue;
+        }
     }
 
     public float GetTimerCurrentValue()
@@ -30,15 +44,10 @@ public class Timer : MonoBehaviour
 
     public void TimerTick(float deltaTime)
     {
-        if (!IsTimerActive)
-            return;
-
         currentValue -= deltaTime;
-        OnTimerCurrentValueChanged?.Invoke(currentValue);
 
         if (currentValue <= 0)
         {
-            IsTimerActive = false;
             OnTimerEnd?.Invoke();
         }
     }

@@ -32,18 +32,13 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     public override void Awake()
     {
         base.Awake();
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 120;
     }
 
     private void Start()
     {
         SwitchGameStateTo(GameState.WaitingForStart);
         StartCoroutine(StartGame());
-    }
-
-    private void Update()
-    {
-        Debug.Log(IsIngredientButtonsInteractable);
     }
 
     private IEnumerator StartGame()

@@ -5,158 +5,172 @@ using UnityEngine;
 
 public class Sandwich : MonoBehaviour
 {
-    [SerializeField] private CustomersQueue customersQueue;
-    [SerializeField] private Transform spawnSandwichPoint;
-    [SerializeField] private float verticalOffset;
-    [SerializeField] private LeanTweenType ease;
+	[SerializeField] private CustomersQueue customersQueue;
+	[SerializeField] private Transform spawnSandwichPoint;
+	[SerializeField] private float verticalOffset;
+	[SerializeField] private LeanTweenType ease;
 
-    private List<Ingredient> sandwichIngredients = new List<Ingredient>();
-    private List<Ingredient> ingredientObjects = new List<Ingredient>();
+	private List<Ingredient> sandwichIngredients = new List<Ingredient>();
+	private List<Ingredient> ingredientObjects = new List<Ingredient>();
 
-    private Ingredient lastIngredient;
+    private List<Ingredient> currentCustomerRecipe;
 
-    public event Action OnSandwichIsDone;
-    public event Action<int> OnCustomerCoinsCalculated;
+	private Ingredient lastIngredient;
 
-    private float ingredientVerticalOffset;
+	public event Action OnSandwichIsDone;
+	public event Action<int> OnCustomerCoinsCalculated;
 
-    private int amountOfMistakes;
+	private float ingredientVerticalOffset;
+
+	private int amountOfMistakes;
 
     private void OnEnable()
-    {
-        customersQueue.OnCustomerExitRestorant += RemoveAllIngredientObjects;
-    }
+	{
+		customersQueue.OnCustomerExitRestorant += RemoveAllIngredientObjects;
+	}
 
-    private void OnDisable()
-    {
-        customersQueue.OnCustomerExitRestorant -= RemoveAllIngredientObjects;
-    }
+	private void OnDisable()
+	{
+		customersQueue.OnCustomerExitRestorant -= RemoveAllIngredientObjects;
+	}
 
-    public void ChooseAndPlaceSandwichIngredient(Ingredient ingredient)
-    {
-        if (sandwichIngredients.Count == 0)
-        {
-            if (ingredient.GetIngredientType() != IngredientType.BreadSlice) return;
+	public void ChooseAndPlaceSandwichIngredient(Ingredient ingredient)
+	{
+		if (sandwichIngredients.Count == 0)
+		{
+			if (ingredient.GetIngredientType() != IngredientType.BreadSlice) return;
 
-            PlaceSandwichIngredient(ingredient, spawnSandwichPoint.position);
-        }
-        else
-        {
-            PlaceSandwichIngredient(ingredient, new Vector3(spawnSandwichPoint.position.x,
-                ingredientVerticalOffset + ingredient.GetVerticalOffset(),
-                spawnSandwichPoint.position.z));
-        }
-    }
+			PlaceSandwichIngredient(ingredient, spawnSandwichPoint.position);
+		}
+		else
+		{
+			PlaceSandwichIngredient(ingredient, new Vector3(spawnSandwichPoint.position.x,
+				ingredientVerticalOffset + ingredient.GetVerticalOffset(),
+				spawnSandwichPoint.position.z));
+		}
+	}
 
-    private void PlaceSandwichIngredient(Ingredient ingredient, Vector3 position)
-    { 
-        sandwichIngredients.Add(ingredient);
+	private void PlaceSandwichIngredient(Ingredient ingredient, Vector3 position)
+	{ 
+		sandwichIngredients.Add(ingredient);
 
-        Ingredient ingredientObject = Instantiate(ingredient,
-            position, Quaternion.identity);
-        ingredientVerticalOffset = ingredientObject.transform.position.y;
+		Ingredient ingredientObject = Instantiate(ingredient,
+			position, Quaternion.identity);
+		ingredientVerticalOffset = ingredientObject.transform.position.y;
 
-        ingredientObjects.Add(ingredientObject);
+		ingredientObjects.Add(ingredientObject);
 
-        CheckFirstCustomerSandwichCorrectness();
-    }
+		CheckFirstCustomerSandwichCorrectness();
+	}
 
-    private void CheckFirstCustomerSandwichCorrectness()
-    {
-        if (customersQueue.GetFirtsCustomer() != null)
-        {
-            CheckSandwichCorrectness(customersQueue.GetFirtsCustomer().GetSandwichRecipe());
-        }
-    }
+	private void CheckFirstCustomerSandwichCorrectness()
+	{
+		if (customersQueue.GetFirtsCustomer() != null)
+		{
+			currentCustomerRecipe = customersQueue.GetFirtsCustomer().GetSandwichRecipe();
+            CheckSandwichCorrectness(currentCustomerRecipe);
+		}
+	}
 
-    private void CheckSandwichCorrectness(List<Ingredient> sandwichRecipe)
-    {
-        if (IsSandwichDone())
-        {
-            GameManager.Instance.IsIngredientButtonsInteractable = false;
+	private void CheckSandwichCorrectness(List<Ingredient> sandwichRecipe)
+	{
+		if (IsSandwichDone())
+		{
+			GameManager.Instance.IsIngredientButtonsInteractable = false;
 
-            CalculateCustomerCoins();
             CompareSandwichWithRecipe(sandwichRecipe);
-            RemoveAllIngredientObjects();
+			RemoveAllIngredientObjects();
 
-            OnSandwichIsDone?.Invoke();
-        }
+			OnSandwichIsDone?.Invoke();
+		}
 
-        bool IsSandwichDone()
-        {
-            return (sandwichIngredients.Count > 1 && sandwichIngredients[0].GetIngredientType() == IngredientType.BreadSlice
-                && sandwichIngredients[sandwichIngredients.Count - 1].GetIngredientType() == IngredientType.BreadSlice);
-        }
+		bool IsSandwichDone()
+		{
+			return (sandwichIngredients.Count > 1 && sandwichIngredients[0].GetIngredientType() == IngredientType.BreadSlice
+				&& sandwichIngredients[sandwichIngredients.Count - 1].GetIngredientType() == IngredientType.BreadSlice);
+		}
+	}
+
+	private void CompareSandwichWithRecipe(List<Ingredient> sandwichRecipe)
+	{
+		amountOfMistakes = 0;
+
+        for (int i = 1; i < sandwichRecipe.Count - 1; i++)
+		{
+			if (sandwichIngredients.Count - 1 > i)
+			{
+                if (sandwichIngredients[i] != sandwichRecipe[i])
+				{
+                    amountOfMistakes++;
+                }
+			}
+		}
+
+        CalculateCustomerCoins();
     }
 
-    private void CompareSandwichWithRecipe(List<Ingredient> sandwichRecipe)
-    {
-        amountOfMistakes = 0;
+	private void CalculateCustomerCoins()
+	{
+		int coins = 0;
 
-        for (int i = 0; i < sandwichIngredients.Count; i++)
-        {
-            if (sandwichRecipe.Count > i)
-            {
-                if (sandwichIngredients[i] == sandwichRecipe[i])
-                    continue;
-            }
+		if (amountOfMistakes == 0)
+		{
+            coins = currentCustomerRecipe.Count;
+		}
+		else
+		{
+			coins = (currentCustomerRecipe.Count - 2) - amountOfMistakes;
+		}
 
-            amountOfMistakes++;
-        }
-    }
+		OnCustomerCoinsCalculated(coins);
+	}
 
-    private void CalculateCustomerCoins()
-    {
-        int coins = 0;
+	private void RemoveAllIngredientObjects()
+	{
+		StartCoroutine(RemoveAllIngredientObjectsRoutine());
+	}
 
-        coins = ingredientObjects.Count - amountOfMistakes;
-        OnCustomerCoinsCalculated(coins);
-    }
+	private IEnumerator RemoveAllIngredientObjectsRoutine()
+	{
+		yield return new WaitForSeconds(0.1f);
 
-    private void RemoveAllIngredientObjects()
-    {
-        StartCoroutine(RemoveAllIngredientObjectsRoutine());
-    }
+		if (ingredientObjects.Count == 0)
+		{
+			yield return null;
+		}
 
-    private IEnumerator RemoveAllIngredientObjectsRoutine()
-    {
-        yield return new WaitForSeconds(0.1f);
+		for (int i = 0; i < ingredientObjects.Count; i++)
+		{
+			TweenScaleAnimation ingredienTweenScaleAnimation = ingredientObjects[i].GetComponent<TweenScaleAnimation>();
+			ingredienTweenScaleAnimation.ScaleOutAnimation(ingredientObjects[i].gameObject);
 
-        if (ingredientObjects.Count == 0)
-            yield return null;
+			Destroy(ingredientObjects[i].gameObject, 5f);
+		}
 
-        for (int i = 0; i < ingredientObjects.Count; i++)
-        {
-            TweenScaleAnimation ingredienTweenScaleAnimation = ingredientObjects[i].GetComponent<TweenScaleAnimation>();
-            ingredienTweenScaleAnimation.ScaleOutAnimation(ingredientObjects[i].gameObject);
+		ClearIngredientLists();
+	}
 
-            Destroy(ingredientObjects[i].gameObject, 5f);
-        }
+	private void RemoveLastIngredient()
+	{
+		if (sandwichIngredients.Count - 1 == 0) return;
 
-        ClearIngredientLists();
-    }
+		Ingredient ingredientToRemove = sandwichIngredients[sandwichIngredients.Count - 1];
+		Ingredient ingredientObjectToRemove = ingredientObjects[ingredientObjects.Count - 1];
 
-    private void RemoveLastIngredient()
-    {
-        if (sandwichIngredients.Count - 1 == 0) return;
+		ingredientObjectToRemove.GetComponent<TweenScaleAnimation>().ScaleOutAnimation(gameObject, ease, 0.2f, () =>
+		{
+			sandwichIngredients.Remove(ingredientToRemove);
+			ingredientObjects.Remove(ingredientObjectToRemove);
 
-        Ingredient ingredientToRemove = sandwichIngredients[sandwichIngredients.Count - 1];
-        Ingredient ingredientObjectToRemove = ingredientObjects[ingredientObjects.Count - 1];
+			lastIngredient = ingredientObjects[ingredientObjects.Count - 1];
 
-        ingredientObjectToRemove.GetComponent<TweenScaleAnimation>().ScaleOutAnimation(gameObject, ease, 0.2f, () =>
-        {
-            sandwichIngredients.Remove(ingredientToRemove);
-            ingredientObjects.Remove(ingredientObjectToRemove);
+			Destroy(ingredientToRemove.gameObject);
+		});
+	}
 
-            lastIngredient = ingredientObjects[ingredientObjects.Count - 1];
-
-            Destroy(ingredientToRemove.gameObject);
-        });
-    }
-
-    private void ClearIngredientLists()
-    {
-        sandwichIngredients.Clear();
-        ingredientObjects.Clear();
-    }
+	private void ClearIngredientLists()
+	{
+		sandwichIngredients.Clear();
+		ingredientObjects.Clear();
+	}
 }

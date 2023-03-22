@@ -498,7 +498,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5e00313836abc0247af531aa3a03b044, type: 2}
+  - {fileID: 2100000, guid: 30190c569134f3d4893b770bc7d85acf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1175,11 +1175,11 @@ MonoBehaviour:
   customerUI: {fileID: 6887747496076079848, guid: abb0b4e5e24e95041b36da07d01e3f17, type: 3}
   animator: {fileID: 4790520189375888739}
   skinnedMeshRenderer: {fileID: 2179891709567767399}
+  material: {fileID: 2100000, guid: 30190c569134f3d4893b770bc7d85acf, type: 2}
   sandwichRecipe: []
   customerTimer: {fileID: 8011267344141586924}
   duration: 0.2
   ease: 1
-  IsCustomerTimerEnd: 0
 --- !u!114 &3400203929317785264
 MonoBehaviour:
   m_ObjectHideFlags: 0
