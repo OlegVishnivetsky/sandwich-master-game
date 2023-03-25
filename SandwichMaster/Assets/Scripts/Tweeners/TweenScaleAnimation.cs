@@ -54,6 +54,14 @@ public class TweenScaleAnimation : MonoBehaviour
         LeanTween.scale(gameObject, Vector3.zero, scaleOutDuration).setEase(ease);
     }
 
+    public void ScaleOutAndDestroyAnimation(GameObject gameObject)
+    {
+        LeanTween.scale(gameObject, Vector3.zero, scaleOutDuration).setEase(ease).setOnComplete(() =>
+        {
+            Destroy(gameObject);
+        });
+    }
+
     public void ScaleOutAnimation(GameObject gameObject, LeanTweenType ease, float duration, Action onCompleteAction)
     {
         LeanTween.scale(gameObject, Vector3.zero, duration).setEase(ease).setOnComplete(onCompleteAction);

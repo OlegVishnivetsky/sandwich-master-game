@@ -27,6 +27,8 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 
     public static event Action OnDayEndedState;
 
+    private int numberOfClientsServed = 0;
+
     public bool IsIngredientButtonsInteractable { get; set; }
 
     public override void Awake()
@@ -38,13 +40,26 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
     private void Start()
     {
         SwitchGameStateTo(GameState.WaitingForStart);
-        StartCoroutine(StartGame());
     }
 
-    private IEnumerator StartGame()
+    public int GetNumberOfClientsServed()
     {
-        yield return new WaitForSeconds(3f);
+        return numberOfClientsServed;
+    }
+
+    public void IncreaseNumberOfClientsServed()
+    {
+        numberOfClientsServed++;
+    }
+
+    public void StartTheDay()
+    {
         SwitchGameStateTo(GameState.DayStarted);
+    }
+
+    public void EndTheDay()
+    {
+        SwitchGameStateTo(GameState.DayEnded);
     }
 
     public GameState GetCurrentGameState()

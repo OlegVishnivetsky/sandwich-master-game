@@ -95,9 +95,9 @@ public class Sandwich : MonoBehaviour
 	{
 		amountOfMistakes = 0;
 
-        for (int i = 1; i < sandwichRecipe.Count - 1; i++)
+        for (int i = 0; i < sandwichRecipe.Count; i++)
 		{
-			if (sandwichIngredients.Count - 1 > i)
+			if (sandwichIngredients.Count > i)
 			{
                 if (sandwichIngredients[i] != sandwichRecipe[i])
 				{
@@ -144,7 +144,7 @@ public class Sandwich : MonoBehaviour
 			TweenScaleAnimation ingredienTweenScaleAnimation = ingredientObjects[i].GetComponent<TweenScaleAnimation>();
 			ingredienTweenScaleAnimation.ScaleOutAnimation(ingredientObjects[i].gameObject);
 
-			Destroy(ingredientObjects[i].gameObject, 5f);
+			Destroy(ingredientObjects[i].gameObject, 3f);
 		}
 
 		ClearIngredientLists();

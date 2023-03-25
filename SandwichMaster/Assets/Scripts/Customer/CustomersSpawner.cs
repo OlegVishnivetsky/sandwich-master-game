@@ -55,6 +55,9 @@ public class CustomersSpawner : MonoBehaviour
         Customer spawnedCustomer = Instantiate(customerPrefab, spawnPoint.position,
                         customerPrefab.transform.rotation);
         spawnedCustomer.SetCustomerRandomColor();
+        spawnedCustomer.SetSandwichRecpeSize(UnityEngine.Random.Range(3,
+            Mathf.CeilToInt(GameManager.Instance.GetNumberOfClientsServed() * 0.5f + 3)));
+
         OnCustomerSpawned?.Invoke(spawnedCustomer);
     }
 }

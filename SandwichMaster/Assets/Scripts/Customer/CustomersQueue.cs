@@ -20,12 +20,14 @@ public class CustomersQueue : MonoBehaviour
 
     private void OnEnable()
     {
+        GameManager.OnDayEndedState += ServeAllCustomers;
         customersSpawner.OnCustomerSpawned += AddCustomersToQueue;
         sandwich.OnSandwichIsDone += ServeClient;
     }
 
     private void OnDisable()
     {
+        GameManager.OnDayEndedState -= ServeAllCustomers;
         customersSpawner.OnCustomerSpawned -= AddCustomersToQueue;
         sandwich.OnSandwichIsDone -= ServeClient;
     }
@@ -50,12 +52,23 @@ public class CustomersQueue : MonoBehaviour
         }
     }
 
+    private void ServeAllCustomers()
+    {
+        for (int i = 0; i < customersQueue.Count; i++)
+        {
+            cashRegisterTransform.gameObject.SetActive(false);
+            customersQueue.Dequeue().IsCustomerInCashRegisterPosition = false;
+            ServeClient();
+        }
+    }
+
     private void ServeClient()
     {
         OnCustomerExitRestorant?.Invoke();
         firstCustomerInQueue.ExitRestorant();
 
         RemoveFirtCustomerInQueue();
+        GameManager.Instance.IncreaseNumberOfClientsServed();
     }
 
     public Customer GetFirtsCustomer()
@@ -68,7 +81,8 @@ public class CustomersQueue : MonoBehaviour
 
     private void CheckFirstCustomerPosition()
     {
-        if (firstCustomerInQueue.transform.position.x >= cashRegisterTransform.position.x)
+        if (firstCustomerInQueue.transform.position.x >= cashRegisterTransform.position.x 
+            && GameManager.Instance.GetCurrentGameState() != GameState.DayEnded)
         {
             GameManager.Instance.IsIngredientButtonsInteractable = true;
 
@@ -92,10 +106,10 @@ public class CustomersQueue : MonoBehaviour
 
     public void RemoveFirtCustomerInQueue()
     {
-        customersQueue.Dequeue();
 
         if (customersQueue.Count > 0)
         {
+            customersQueue.Dequeue();
             firstCustomerInQueue = customersQueue.Peek();
         }
     }

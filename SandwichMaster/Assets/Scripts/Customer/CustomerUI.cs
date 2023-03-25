@@ -75,7 +75,7 @@ public class CustomerUI : MonoBehaviour
             GameObject ingredientUIObject = Instantiate(ingredient.GetIngredientUIObject(),
                 new Vector3(1, 1, 1), transform.rotation, recipePanelScaleAnimation.transform);
 
-            ingredientUIObject.transform.localPosition = new Vector3(1, 1, -150);
+            ingredientUIObject.transform.localPosition = new Vector3(1, 1, -90);
             ingredientUIObject.transform.localScale = Vector3.one;
             ingredientUIObjects.Add(ingredientUIObject);
         }

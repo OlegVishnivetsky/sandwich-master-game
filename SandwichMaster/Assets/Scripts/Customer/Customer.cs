@@ -32,17 +32,17 @@ public class Customer : MonoBehaviour
         customerTimer.OnTimerEnd.AddListener(() => IsCustomerTimerEnd = true);
     }
 
-    private void Start()
-    {
-        sandwichSize = UnityEngine.Random.Range(3, 6);
-    }
-
     private void Update()
     {
         if (IsCustomerInCashRegisterPosition)
         {
             customerTimer.TimerTick(Time.deltaTime);
         }
+    }
+
+    public void SetSandwichRecpeSize(int sandwichSize)
+    {
+        this.sandwichSize = sandwichSize; 
     }
 
     public List<Ingredient> GetSandwichRecipe()
